@@ -48,7 +48,7 @@ let imgScale = 1;
 					<img src='https://i.imgur.com/GYiPIRC.jpeg' alt="img1" id="img1">
 				</div>		
 				<div>
-					<svg fill="#000000" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+					<svg class="controlbutton" fill="#000000" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 60 60" xml:space="preserve">
 <g id="playbutton">
 	<path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
@@ -67,8 +67,8 @@ let imgScale = 1;
 				</div>	
 			</div>
 			<div id="footer" class="flex-container">
-			<h2 id="title2" class="font-extralight">Asta Leppä</h2>
-			<h2 id="title3" class="font-extralight">Juho Vihervuori</h2>
+			<h2 id="title2" class="font-extralight place-self-start ">Asta Leppä</h2>
+			<h2 id="title3" class="font-extralight place-self-end">Juho Vihervuori</h2>
 			</div>
 		</main>
   	</body>
@@ -108,6 +108,7 @@ let imgScale = 1;
 	h2 {
 		font-size: 1.5rem;
 		font-family: 'Hepta Slab Variable', serif;	
+		text-align: center;
 	}
 
 	#footer {
@@ -116,7 +117,6 @@ let imgScale = 1;
 		width: 100%;
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
 		gap: 5rem;
 
 	}
@@ -133,7 +133,7 @@ let imgScale = 1;
 		transition: all 5s ease-in-out;
 		cursor:pointer;	
 		max-width: fit-content;
-		width: 20%;
+		width: 15em;
 		transform-origin: top;
 		margin: auto;
 		
@@ -173,11 +173,21 @@ let imgScale = 1;
 		margin: auto;
 	}
 
-	#Capa_1{
+	.controlbutton{
 		margin-right: auto;
 		margin-left: auto;
 		margin-top: 10px;
 		opacity: 0.5;
+		cursor:pointer;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	.controlbutton:hover {
+		opacity: 1;
+	}
+
+	.controlbutton:active {
+		opacity: 1;
 	}
 
 
@@ -199,13 +209,13 @@ let imgScale = 1;
 	const playButton = document.getElementById("playbutton");
 
 	function imageUp() {
-		img1Obj.style.width = "30%";
+		img1Obj.style.width = "25em";
 		img1Obj.style.opacity = "1"
 		pauseButton.style.visibility = "visible";
 		playButton.style.visibility = "hidden";
 	}
 	function imageDown() {
-		img1Obj.style.width = "20%";
+		img1Obj.style.width = "15em";
 		img1Obj.style.opacity = "0.2"
 		pauseButton.style.visibility = "hidden";
 		playButton.style.visibility = "visible";
