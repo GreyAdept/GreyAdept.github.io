@@ -93,23 +93,13 @@ let imgScale = 1;
 
 	h1 {
 		font-size: 2rem;
-		line-height: 1;
+		line-height: normal;
 		color: black;	
 		text-align: center;
 		font-family: 'Hepta Slab Variable', serif;	
 		margin-bottom: 20px;
 		margin-top: 10px;
 	}
-
-
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-
 	
 	.swiper {
 		color: white;
@@ -122,8 +112,8 @@ let imgScale = 1;
 		opacity: 0.2;
 		transition: all 5s ease-in-out;
 		cursor:pointer;	
-		max-width: 200px;
-		transform: scale(1);
+		max-width: fit-content;
+		width: 20%;
 		transform-origin: top;
 		margin: auto;
 		
@@ -167,6 +157,7 @@ let imgScale = 1;
 		margin-right: auto;
 		margin-left: auto;
 		margin-top: 10px;
+		margin-bottom: 50px;
 	}
 
 
@@ -186,13 +177,13 @@ let imgScale = 1;
 	const playButton = document.getElementById("playbutton");
 
 	function imageUp() {
-		img1Obj.style.maxWidth = "400px";
+		img1Obj.style.width = "30%";
 		img1Obj.style.opacity = "1"
 		pauseButton.style.visibility = "visible";
 		playButton.style.visibility = "hidden";
 	}
 	function imageDown() {
-		img1Obj.style.maxWidth = "200px";
+		img1Obj.style.width = "20%";
 		img1Obj.style.opacity = "0.2"
 		pauseButton.style.visibility = "hidden";
 		playButton.style.visibility = "visible";
@@ -201,7 +192,7 @@ let imgScale = 1;
 
     img1.addEventListener('click', () => {
 		console.log("it works");
-		if (document.getElementById("img1").style.maxWidth == "400px") {
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
 			imageUp()	
@@ -211,7 +202,7 @@ let imgScale = 1;
 	
     button.addEventListener('click', () => {
 		console.log("it works");
-		if (document.getElementById("img1").style.maxWidth == "400px") {
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
 			imageUp();
