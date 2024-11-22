@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import '@fontsource/notable';
+import '@fontsource-variable/hepta-slab';
+let imgScale = 1;
+---
+
+<script type="module">
+	import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+	
+	const swiper = new Swiper('.swiper', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
+	autoHeight: true,
+  
+	// If we need pagination
+	pagination: {
+	  el: '.swiper-pagination',
+	},
+  
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+  });
+  </script>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<Layout title="test">
+	<html lang="en">
+ 	 	<head>
+    		<meta charset="utf-8" />
+    		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    		<meta name="viewport" content="width=device-width" />
+    		<meta name="generator" content={Astro.generator} >
+    		<title>Tyhjyyden Valu</title>
+ 	 	</head>
+ 	 <body>
+		<main>
+			<div class="box">
+				<h1 id="title" class="font-extralight">Tyhjyyden valu - Casting for Emptiness</h1>
+				<div>
+					<img src='https://i.imgur.com/GYiPIRC.jpeg' alt="img1" id="img1">
+				</div>
+			</div>'
+			<div>
+				<svg fill="#000000" height="200px" width="200px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+					viewBox="0 0 60 60" xml:space="preserve">
+					<g>
+					<path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
+						c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
+						C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z"/>
+					<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+						S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+					</g>
+				</svg>
+			</div>
+		</main>'
+  	</body>
+	</html>
+</Layout>
+
+<style define:vars={{ imgScale }}>
+
+	body {
+		margin: 0;
+		padding: 0;
+		background-color: white;
+		height: 100svh;
+		overflow:hidden ;
+	}
+
+	.box {
+		margin: auto;
+	}
+
+	main {
+		padding: 0;
+		margin: 0;
+	}
+
+
+	h1 {
+		font-size: 2rem;
+		line-height: 2;
+		color: black;	
+		text-align: center;
+		margin: 0px;
+		font-family: 'Hepta Slab Variable', serif;	
+	}
+
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+	
+	.swiper {
+		color: white;
+		transition: transform .3s;
+		transform: scale(0.5)
+	}
+
+	#img1 {
+		display: block;
+		opacity: 0.2;
+		transition: all 2s ease-in-out;
+		cursor:pointer;	
+		transform: scale(0.2);
+		transform-origin: top;
+		margin: auto;
+		
+	}
+	#img2 {
+		transition: transform .2s;
+		cursor:pointer;
+		border: 5px solid black;
+	}
+	#img3 {
+		transition: transform .2s;
+		cursor:pointer;
+		border: 5px solid black;
+	}
+	
+	.swiper-button-prev {
+		color: black;
+	}
+	.swiper-button-next {
+		color: black;
+	}
+
+	.swiper-slide
+	{
+		transition: transform .2s;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.playbutton{
+		text-align: center;
+	}
+
+	.play-btn__svg{
+  		transition: 1s; 
+  		fill:black; 
+  		opacity: 1;
+	}
+
+
+
+		
+
+</style>
+
+<script>
+
+	const img1 = document.querySelector("#img1");
+	const img2 = document.querySelector("#img2");
+	const img3 = document.querySelector("#img3");
+
+    img1.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("img1").style.transform == "scale(0.3)") {
+			document.getElementById("img1").style.transform = "scale(0.2)";
+			document.getElementById("img1").style.opacity = "0.2"
+		} else {
+			document.getElementById("img1").style.transform = "scale(0.3)";
+			document.getElementById("img1").style.opacity = "1"
+			
+		}	
+	});
+	img2.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("swiper").style.transform == "scale(1.5)") {
+			document.getElementById("swiper").style.transform = "scale(0.4)";
+		} else {
+			document.getElementById("swiper").style.transform = "scale(1.5)";
+		}	
+	});
+	img3.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("swiper").style.transform == "scale(1.5)") {
+			document.getElementById("swiper").style.transform = "scale(1)";
+		} else {
+			document.getElementById("swiper").style.transform = "scale(1.5)";
+		}	
+	});
+
+	
+</script>
