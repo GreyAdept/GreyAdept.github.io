@@ -1,0 +1,465 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import '@fontsource/notable';
+import '@fontsource-variable/hepta-slab';
+let imgScale = 1;
+---
+
+<script type="module">
+	import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+	
+	const swiper = new Swiper('.swiper', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
+	autoHeight: false,
+    speed: 600,
+  
+	// If we need pagination
+	pagination: {
+	  el: '.swiper-pagination',
+	},
+  
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+  });
+  </script>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<Layout title="test">
+	<!doctype html>
+	<html lang="en">
+ 	 	<head>
+    		<title>Tyhjyyden Valu</title>
+ 	 	</head>
+ 	 <body>
+		<main>
+			<section>
+				<h1 id="title" class="font-extralight">Tyhjyyden valu - Casting for Emptiness</h1>
+				
+			</section>
+            <section id="image_swiper">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+                            <div id="imgcontainer">
+                                <img src='https://i.imgur.com/GYiPIRC.jpeg' alt="Photo n.1" id="img1" class="gallery_img">
+                            </div>
+                        </div>
+						<div class="swiper-slide">
+                            <div id="imgcontainer">
+                                <img src='https://i.imgur.com/GYiPIRC.jpeg' alt="Photo n.2" id="img2" class="gallery_img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div id="imgcontainer">
+                                <img src='https://i.imgur.com/GYiPIRC.jpeg' alt="Photo n.3" id="img3" class="gallery_img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div id="imgcontainer">
+                                <img src='https://i.imgur.com/GYiPIRC.jpeg' alt="Photo n.4" id="img4" class="gallery_img">
+                            </div>
+                        </div>
+						
+					</div>
+                   
+                
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-prev" id="arrow1"></div>
+                    <div class="swiper-button-next" id="arrow2"></div>
+					
+				</div>
+			</section>
+			 
+	
+			 <div id="buttonsandbars" class="flex">
+				
+                <svg class="controlbutton justify-self-start" fill="#000000" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+viewBox="0 0 60 60" xml:space="preserve">
+<g id="playbutton">
+<path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
+    c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
+    C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z"/>
+<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+    S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+</g>
+<g id="pausebutton">
+<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+    S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+<path d="M33,46h8V14h-8V46z M35,16h4v28h-4V16z"/>
+<path d="M19,46h8V14h-8V46z M21,16h4v28h-4V16z"/>
+</g>
+                </svg>
+                <div id="animation" class="bg-black justify-self-center">
+                    <div class="now playing" id="music">
+                        <span class="bar n1">A</span>
+                        <span class="bar n2">B</span>
+                        <span class="bar n3">c</span>
+                        <span class="bar n4">D</span>
+                        <span class="bar n5">E</span>
+                    </div>
+                </div>
+            </div>	
+			</section>
+			
+            
+		</main>
+		<div id="footer" class="flex-container">
+			<h1 id="title2" class="font-extralight">Asta Leppä</h1>
+			<h1 id="title3" class="font-extralight">Juho Vihervuori</h1>
+		</div>	
+  	</body>
+	</html>
+</Layout>
+
+<style define:vars={{ imgScale }}>
+
+	body {
+		display: flex;
+		flex-direction: column;
+		margin: 0px;
+		padding: 0em;
+		background-color: white;
+		overflow: hidden;
+		min-height: 100svh;
+	}
+	
+	h1 {
+		line-height: normal;
+		color: black;	
+		text-align: center;
+		font-family: 'Hepta Slab Variable', serif;	
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
+
+	h2 {
+		font-family: 'Hepta Slab Variable', serif;	
+		text-align: center;
+	}
+
+	#footer {
+		position:fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 2rem;
+		padding-top: 1%;
+		z-index: 999;
+	}
+
+    .gallery_img {
+        max-width: 100%;
+		width: 80%;
+		display: block;
+		transform-origin: top;
+		transition: all 5s ease-in-out;
+		margin: auto;
+		cursor: pointer;
+		opacity: 0.5;
+    }
+    
+	
+	.swiper {
+	    
+	}
+
+
+    #buttonsandbars {
+        margin:auto;
+        flex-direction: row;
+        justify-content: center;
+		gap: 3px;
+		margin-top: 5px;
+    }
+
+	#imgcontainer{
+		width: 100%;
+		max-width: 50vh;
+        margin: auto;
+		transition: all 5s ease-in-out;
+		flex-direction: column;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		
+	}
+
+	#imgandbutton{
+		
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		margin:auto;
+		transition: all 5s ease-in-out;
+	}
+	
+	.swiper-button-prev {
+		color: black;
+	}
+	.swiper-button-next {
+		color: black;
+	}
+
+	.swiper-slide
+	{
+		transition: all 1s;
+		margin-left: auto;
+		margin-right: auto;
+  
+	}
+
+    #image_swiper
+    {
+        margin-left: auto;
+        margin-right: auto;
+		width: 50%;
+        
+    }
+
+
+	#playbutton{
+		visibility: visible;
+	}
+	
+	#pausebutton{
+		visibility: hidden;
+	}
+
+	.controlbutton{
+		display: inline-block;
+		opacity: 0.5;
+		cursor:pointer;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	.controlbutton:hover {
+		opacity: 1;
+	}
+
+	.controlbutton:active {
+		opacity: 1;
+	}
+
+	h1{
+		font-size: 1.2rem;
+	}
+
+	@media (min-width: 992px) {
+		h1 {
+			font-size: 2rem;
+		}
+	}
+
+.playing {
+  position: absolute;
+  display: block;
+  margin-top: 25px;
+}
+.now.playing .bar {
+  display: inline-block;
+  margin-right: 1px;
+  
+  width: 2px;
+  height: 1px;
+  overflow: hidden;
+  background: grey;
+  color: transparent;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: 0;
+ 
+  
+  
+}
+
+.paused.playing .bar {
+  animation-iteration-count: infinite;
+}
+
+
+.n1 {
+  animation-delay: 0.6s;
+}
+.n2 {
+  animation-delay: 0.3s;
+}
+.n3 {
+  animation-delay: 1.4s;
+}
+.n4 {
+  animation-delay: 1.0s;
+}
+.n5 {
+  animation-delay: 2.4s;
+}
+.n6 {
+  animation-delay: 1.4s;
+}
+.n7 {
+  animation-delay: 3.2s;
+}
+.n8 {
+  animation-delay: 2.0s;
+}
+@keyframes pulse {
+  0% {
+    height: 1px;
+    margin-top: 0;
+  }
+  10% {
+    height: 20px;
+    margin-top: -20px;
+  }
+  50% {
+    height: 10px;
+    margin-top: -10px;
+  }
+  60% {
+    height: 20px;
+    margin-top: -20px;
+  }
+  80% {
+    height: 30px;
+    margin-top: -30px;
+  }
+  100% {
+    height: 1px;
+    margin-top: 0;
+  }
+}
+</style>
+
+<script>
+	//test
+    
+	const button = document.querySelector("#Capa_1");
+
+	const pauseButton = document.getElementById("pausebutton");
+	const playButton = document.getElementById("playbutton");
+
+	const allImages = Array.from(document.getElementsByClassName("gallery_img") as HTMLCollectionOf<HTMLElement>);
+	const image1 = document.getElementById("img1");
+
+	const arrow1 = document.getElementById("arrow1");
+	const arrow2 = document.getElementById("arrow2");
+
+
+	//var audio = new Audio('https://pub-6a26b65f31aa4f40b5c418ef13aac133.r2.dev/Be%20-%20Kindle%202023-09-09.flac');
+	var audio = new Audio('https://dl.dropbox.com/scl/fi/7096koz7nj3ao6ph109er/t.wav?rlkey=8c4i46s1lg225sy5gow8autmn&st=yoq2nrck');
+	audio.volume = 0;
+
+	var player = document.getElementById("music");
+	
+	
+	//img1Obj.style.opacity = "0.5";
+	
+
+	function imageUp() {
+		togglePause();
+		audio.volume = 0;
+		volumeUp();
+		//img1Obj.style.width = "100%";
+		//img1Obj.style.opacity = "2";
+		pauseButton.style.visibility = "visible";
+		playButton.style.visibility = "hidden";
+		console.log(audio.paused);
+		player.style.visibility = "visible";
+		player.classList.toggle("paused");
+		
+
+		for (let i = 0; i < allImages.length; i++) 
+		{
+  			allImages[i].style.width = "100%"
+			allImages[i].style.opacity = "1"
+		}
+	}
+
+	function imageDown() {
+		audio.volume = 1;
+		volumeDown();
+		//img1Obj.style.width = "70%";
+		//img1Obj.style.opacity = "0.5"
+		pauseButton.style.visibility = "hidden";
+		playButton.style.visibility = "visible";
+		console.log(audio.paused);
+		player.classList.toggle("paused");
+
+		for (let i = 0; i < allImages.length; i++) 
+		{
+  			allImages[i].style.width = "80%";
+			allImages[i].style.opacity = "0.5";
+		}
+	}
+
+	function togglePause() {
+		if (audio.paused) {
+			audio.play();
+		}
+		else {
+			audio.pause();
+		}
+	}
+
+
+	function volumeUp() {
+		if (audio.volume < 0.9) {
+			audio.volume += 0.1;
+			var timer = setTimeout(volumeUp,100);
+		} else {
+			audio.volume = 1;
+		}
+		}
+		
+	function volumeDown() {
+		if (audio.volume > 0.1) {
+			audio.volume -= 0.1;
+			var timer = setTimeout(volumeDown,100);
+		} 
+		else{
+			audio.volume = 0;
+			togglePause();
+		}	
+	}
+
+
+
+    image1.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
+			imageDown();
+		} else {
+			imageUp()	
+		}
+
+	});
+	
+    button.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
+			imageDown();
+		} else {
+			imageUp();
+		}
+		
+	});
+	
+
+	
+</script>
+

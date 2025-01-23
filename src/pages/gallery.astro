@@ -6,6 +6,36 @@ import '@fontsource-variable/hepta-slab';
 let imgScale = 1;
 ---
 
+<script type="module">
+	import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+	
+	const swiper = new Swiper('.swiper', {
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
+	autoHeight: false,
+    speed: 600,
+  
+	// If we need pagination
+	pagination: {
+	  el: '.swiper-pagination',
+	},
+  
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+  });
+  </script>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <Layout title="test">
 	<!doctype html>
 	<html lang="en">
@@ -16,38 +46,69 @@ let imgScale = 1;
 		<main>
 			<section>
 				<h1 id="title" class="font-extralight">Tyhjyyden valu - Casting for Emptiness</h1>
-			<section id="imgcontainer">
-				<div id="imgandbutton">
-					<img src='https://i.imgur.com/GYiPIRC.jpeg' alt="img1" id="img1">
-					<div id="buttonandbars" class="flex flex-row place-items-center gap-0.5">
-						<svg class="controlbutton justify-self-start" fill="#000000" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-		viewBox="0 0 60 60" xml:space="preserve">
-	<g id="playbutton">
-		<path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
-			c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
-			C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z"/>
-		<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-			S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
-	</g>
-	<g id="pausebutton">
-		<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-			S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
-		<path d="M33,46h8V14h-8V46z M35,16h4v28h-4V16z"/>
-		<path d="M19,46h8V14h-8V46z M21,16h4v28h-4V16z"/>
-	</g>
-						</svg>
-						<div id="animation" class="bg-black justify-self-end">
-							<div class="now playing" id="music">
-								<span class="bar n1">A</span>
-								<span class="bar n2">B</span>
-								<span class="bar n3">c</span>
-								<span class="bar n4">D</span>
-								<span class="bar n5">E</span>
-							</div>
-						</div>
+			</section>
+            <section id="image_swiper">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+                            <div id="imgcontainer">
+                                <img src='https://i.imgur.com/GYiPIRC.jpeg' alt="Photo n.1" id="img1" class="gallery_img">
+                            </div>
+                        </div>
+						<div class="swiper-slide">
+                            <div id="imgcontainer">
+                                <img src='https://i.imgur.com/GYiPIRC.jpeg' alt="Photo n.2" id="img2" class="gallery_img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div id="imgcontainer">
+                                <img src='https://i.imgur.com/GYiPIRC.jpeg' alt="Photo n.3" id="img3" class="gallery_img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div id="imgcontainer">
+                                <img src='https://i.imgur.com/GYiPIRC.jpeg' alt="Photo n.4" id="img4" class="gallery_img">
+                            </div>
+                        </div>
 					</div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+					
 				</div>
-			</section>	
+			</section>
+			</section>
+            <div id="buttonsandbars" class="flex flex-row place-items-center gap-1">
+                <svg class="controlbutton justify-self-start" fill="#000000" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+viewBox="0 0 60 60" xml:space="preserve">
+<g id="playbutton">
+<path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
+    c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
+    C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z"/>
+<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+    S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+</g>
+<g id="pausebutton">
+<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+    S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+<path d="M33,46h8V14h-8V46z M35,16h4v28h-4V16z"/>
+<path d="M19,46h8V14h-8V46z M21,16h4v28h-4V16z"/>
+</g>
+                </svg>
+                <div id="animation" class="bg-black justify-self-end">
+                    <div class="now playing" id="music">
+                        <span class="bar n1">A</span>
+                        <span class="bar n2">B</span>
+                        <span class="bar n3">c</span>
+                        <span class="bar n4">D</span>
+                        <span class="bar n5">E</span>
+                    </div>
+                </div>
+            </div>	
 		</main>
 		<div id="footer" class="flex-container">
 			<h1 id="title2" class="font-extralight">Asta Leppä</h1>
@@ -96,31 +157,38 @@ let imgScale = 1;
 		padding-top: 1%;
 		z-index: 999;
 	}
+
+    .gallery_img {
+        border-radius: 1500px;
+        display: block;
+        
+    }
+    
 	
 	.swiper {
-		color: white;
-		transition: transform .3s;
-		transform: scale(0.5)
+		width: 600px;
+		height: 300px;
+        
 	}
 
-	#img1 {	
-		display: block;
-		opacity: 1;
-		transition: all 5s ease-in-out;
-		cursor:pointer;	
-		transform-origin: top;
-	}
+
+    #buttonsandbars {
+        margin:auto;
+        flex-direction: row;
+        justify-content: center;
+    }
 
 	#imgcontainer{
-		width: 100%;
+		width: 50%;
 		max-width: 50vh;
-		margin:auto;
+        margin: auto;
 		transition: all 5s ease-in-out;
 		flex-direction: column;
 		padding-left: 1rem;
 		padding-right: 1rem;
 		
 	}
+
 	#imgandbutton{
 		
 		display: block;
@@ -139,10 +207,20 @@ let imgScale = 1;
 
 	.swiper-slide
 	{
-		transition: transform .2s;
+		transition: all 1s;
 		margin-left: auto;
 		margin-right: auto;
+  
 	}
+
+    #image_swiper
+    {
+        margin-left: auto;
+        margin-right: auto;
+
+        
+    }
+
 
 	#playbutton{
 		visibility: visible;
@@ -256,10 +334,11 @@ let imgScale = 1;
 
 <script>
 	//test
+    /*
 	const img1 = document.querySelector("#img1");
 	const button = document.querySelector("#Capa_1")
 
-	const img1Obj = document.getElementById("imgandbutton");
+	const img1Obj = document.getElementById("img1");
 	const pauseButton = document.getElementById("pausebutton");
 	const playButton = document.getElementById("playbutton");
 
@@ -268,7 +347,7 @@ let imgScale = 1;
 
 	var player = document.getElementById("music");
 
-	img1Obj.style.opacity = "0.5";
+	//img1Obj.style.opacity = "0.5";
 	
 
 	function imageUp() {
@@ -347,7 +426,7 @@ let imgScale = 1;
 		}
 		
 	});
-	
+	*/
 
 	
 </script>
