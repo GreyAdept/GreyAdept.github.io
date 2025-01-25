@@ -15,6 +15,7 @@
     "@fontsource-variable/hepta-slab": "^5.1.0",
     "@fontsource/notable": "^5.1.0",
     "astro": "^5.1.8",
+    "swiper": "^11.2.1",
     "tailwindcss": "^3.4.15"
   }
 }
