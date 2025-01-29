@@ -4,140 +4,107 @@ import Card from '../components/Card.astro';
 import '@fontsource/notable';
 import '@fontsource-variable/hepta-slab';
 let imgScale = 1;
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 ---
 
 <Layout title="test">
 	<!doctype html>
 	<html lang="en">
- 	 	<head>
-    		<title>Tyhjyyden Valu</title>
- 	 	</head>
- 	 <body>
-		<main>
-			<section>
-				<h1 id="title" class="font-extralight">Tyhjyyden valu - Casting for Emptiness</h1>
-			</section>
-			
-				<div class="swiper" id="swiper-container">
-					<div class="swiper-wrapper">
-						<!-- Slides -->
-						<div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/FwCRGhy/Inhimillisyyskatoaa.webp' alt="Photo n.1" id="img1" class="gallery_img">
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/TkZY0JT/Ulosp-syyn-vie-tie-2.webp' alt="Photo n.2" id="img2" class="gallery_img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/Zhd3SLd/Ulosp-syyn-vie-tie-1.webp' alt="Photo n.3" id="img3" class="gallery_img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/vzbh5hZ/Sokkelon-ydin-pieni.webp' alt="Photo n.4" id="img4" class="gallery_img">
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/grBV0qY/Sementin-leiju.webp' alt="Photo n.5" id="img5" class="gallery_img">
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/N91Xy2j/Muistitko-edes-valon.webp' alt="Photo n.6" id="img6" class="gallery_img">
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/PrCNTWz/L-mmin-valo-kaikessa-t-ss-kylm-ss.webp' alt="Photo n.7" id="img7" class="gallery_img">
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/JBHJPj0/Kulutettu-loppuun-ja-viety-pois.webp' alt="Photo n.8" id="img8" class="gallery_img">
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/RP93J2F/Kulutettu-loppuun-2.webp' alt="Photo n.9" id="img9" class="gallery_img">
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/Q8MXqR4/Kipua-n-m-1.webp' alt="Photo n.10" id="img10" class="gallery_img">
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/KhFXGwZ/Kipua-n-m-2.webp' alt="Photo n.11" id="img11" class="gallery_img">
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/FhqDw5d/Ja-y-oli-hiljainen-ja-ter-v.webp' alt="Photo n.12" id="img12" class="gallery_img">
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div id="imgcontainer">
-                                <img src='https://i.ibb.co/tKBvfSc/Kammio.webp' alt="Photo n.13" id="img13" class="gallery_img">
-                            </div>
-                        </div>
-					</div>	
-					<!-- Navigation buttons -->
-					<div class="swiper-button-prev" id="arrow1"></div>
-					<div class="swiper-button-next" id="arrow2"></div>
-					<div id="buttonsandbars" class="flex">
-				
-						<svg class="controlbutton" fill="#000000" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-		viewBox="0 0 60 60" xml:space="preserve">
-		<g id="playbutton">
-		<path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
-			c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
-			C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z"/>
-		<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-			S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
-		</g>
-		<g id="pausebutton">
-		<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-			S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
-		<path d="M33,46h8V14h-8V46z M35,16h4v28h-4V16z"/>
-		<path d="M19,46h8V14h-8V46z M21,16h4v28h-4V16z"/>
-		</g>
-						</svg>
-						<div id="animation" class="bg-black">
-							<div class="now playing" id="music">
-								<span class="bar n1">A</span>
-								<span class="bar n2">B</span>
-								<span class="bar n3">c</span>
-								<span class="bar n4">D</span>
-								<span class="bar n5">E</span>
-							</div>
-						</div>
-					</div>	
-				</div>
-			</section>
-			
-		</main>
-		<div id="footer" class="flex">
-			<h1 id="title2" class="font-extralight">Asta Leppä <br> Juho Vihervuori</h1>
-			
-			<u><h1 id="esseetitle" class="font-extralight"><a href="/essee">Essee</a></h1></u>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+		<h1 id="title" class="font-extralight">Tyhjyyden valu - Casting for Emptiness</h1>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+			<!-- Slides -->
+			<div data-hash="slide01" class="swiper-slide">
+				<img src='https://i.ibb.co/grBV0qY/Sementin-leiju.webp' alt="Photo n.1" id="img01" class="gallery_img">
+			</div>
+			<div data-hash="slide02" class="swiper-slide">
+				<img src='https://i.ibb.co/dw8zddrx/Inhimillisyyskatoaa.webp' alt="Photo n.2" id="img02" class="gallery_img">
+			</div>
+			<div data-hash="slide03" class="swiper-slide">                        
+				<img src='https://i.ibb.co/tKBvfSc/Kammio.webp' alt="Photo n.3" id="img03" class="gallery_img">
+			</div>
+			<div data-hash="slide04" class="swiper-slide">
+				<img src='https://i.ibb.co/TkZY0JT/Ulosp-syyn-vie-tie-2.webp' alt="Photo n.4" id="img04" class="gallery_img">
+			</div>
+			<div data-hash="slide05" class="swiper-slide">
+				<img src='https://i.ibb.co/N91Xy2j/Muistitko-edes-valon.webp' alt="Photo n.5" id="img05" class="gallery_img">
+			</div>
+			<div data-hash="slide06" class="swiper-slide">
+				<img src='https://i.ibb.co/FhqDw5d/Ja-y-oli-hiljainen-ja-ter-v.webp' alt="Photo n.6" id="img06" class="gallery_img">
+			</div>
+			<div data-hash="slide07" class="swiper-slide">
+				<img src='https://i.ibb.co/RP93J2F/Kulutettu-loppuun-2.webp' alt="Photo n.7" id="img07" class="gallery_img">
+			</div>
+			<div data-hash="slide08" class="swiper-slide">
+				<img src='https://i.ibb.co/PrCNTWz/L-mmin-valo-kaikessa-t-ss-kylm-ss.webp' alt="Photo n.8" id="img08" class="gallery_img">
+			</div>
+			<div data-hash="slide09" class="swiper-slide">
+				<img src='https://i.ibb.co/KhFXGwZ/Kipua-n-m-2.webp' alt="Photo n.9" id="img09" class="gallery_img">
+			</div>
+			<div data-hash="slide10" class="swiper-slide">
+				<img src='https://i.ibb.co/vzbh5hZ/Sokkelon-ydin-pieni.webp' alt="Photo n.8" id="img10" class="gallery_img">
+			</div>
 		</div>	
-  	</body>
-	</html>
+        <!-- Add navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+		<div class="swiper-pagination"></div>
+      </div>
+	  <div id="buttonsandbars" class="flex">
+				
+		<svg class="controlbutton" fill="#000000" height="55px" width="55px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+viewBox="0 0 60 60" xml:space="preserve">
+<g id="playbutton">
+<path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
+c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
+C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z"/>
+<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+</g>
+<g id="pausebutton">
+<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+<path d="M33,46h8V14h-8V46z M35,16h4v28h-4V16z"/>
+<path d="M19,46h8V14h-8V46z M21,16h4v28h-4V16z"/>
+</g>
+		</svg>
+		<div id="animation" class="bg-black">
+			<div class="now playing" id="music">
+				<span class="bar n1">A</span>
+				<span class="bar n2">B</span>
+				<span class="bar n3">c</span>
+				<span class="bar n4">D</span>
+				<span class="bar n5">E</span>
+			</div>
+		</div>
+	</div>	
+    </div>
+  </body>
+  <div id="footer" class="flex">
+	<h1 id="title2" class="font-extralight">Asta Leppä <br> Juho Vihervuori</h1>
+	<u><h1 id="esseetitle" class="font-extralight"><a href="/essee">Essee</a></h1></u>
+</div>	
+</html>
 </Layout>
 
 <style define:vars={{ imgScale }}>
 
 	body {
-		display: flex;
-		flex-direction: column;
+		/*display: flex;*/
+		/*flex-direction: column;*/
 		margin: 0px;
-		padding: 1em;
+		padding: 0em;
 		background-color: white;
 		overflow: hidden;
 		min-height: 100svh;
@@ -181,50 +148,43 @@ let imgScale = 1;
 		
 	}
 
+
     .gallery_img {
-        max-width: 100%;
-		width: 80%;
-		/*display: block;*/
-		transform-origin: center;
-		transition: all 5s ease-in-out;
+		width: 100%;
+      	height: 100%;
+		transform: scale(0.8);
+		display: block;
 		margin: auto;
+		transition: all 10s ease-in-out;
 		cursor: pointer;
 		opacity: 0.5;
+		object-fit: scale-down;
 		
     }
     
 	
 	.swiper {
-	    
+	    width: 99%;
+  		height: 50vh;
+		display: flex;
+
 	}
 
-
-    #buttonsandbars {
-		gap: 3px;
-		margin-left: auto;
-		margin-right: auto;
-		justify-content: center;
-
-		/*
-        flex-direction: row;
-        justify-content: center;
-		margin-top: 10vh;
-		*/
-    }
-
-	#imgcontainer{
-		width: 100%;
-		max-width: 50vh;
-        margin: auto;
-		transform-origin: bottom;
-		transition: all 5s ease-in-out;
-		/*flex-direction: column;*/
-		padding-left: 1rem;
-		padding-right: 1rem;
+	.swiper-slide
+	{
 		
 	}
 
 
+
+
+    #buttonsandbars {
+		gap: 3px;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: center;
+    }
 	
 	.swiper-button-prev {
 		color: black;
@@ -235,21 +195,8 @@ let imgScale = 1;
 
 	.swiper-slide
 	{
-		transition: all 1s;
-		margin-left: auto;
-		margin-right: auto;
-		
-  
+		transition: all 1s;  
 	}
-
-    #image_swiper
-    {
-        margin-left: auto;
-        margin-right: auto;
-		/*width: 50%;*/
-        
-    }
-
 
 	#playbutton{
 		visibility: visible;
@@ -310,6 +257,7 @@ let imgScale = 1;
 }
 
 
+
 .n1 {
   animation-delay: 0.6s;
 }
@@ -364,26 +312,25 @@ let imgScale = 1;
 
 <script>
 	import Swiper from 'swiper';
-	import { Navigation, Pagination } from 'swiper/modules';
-	// import Swiper and modules styles
-	import 'swiper/css';
-	import 'swiper/css/navigation';
-	import 'swiper/css/pagination';
-
+	import { Navigation, Pagination, HashNavigation } from 'swiper/modules';
+	
 	const swiper = new Swiper('.swiper', {
-	
 	//swiper modules
-	modules: [Navigation, Pagination],
-	
+	modules: [Navigation, Pagination, HashNavigation],
 	// Optional parameters
 	direction: 'horizontal',
 	loop: true,
 	autoHeight: false,
     speed: 600,
-  
+	hashNavigation: {
+		watchState: true,
+	},
+
 	// If we need pagination
 	pagination: {
 	  el: '.swiper-pagination',
+	  type: 'fraction',
+	  clickable: true,
 	},
   
 	// Navigation arrows
@@ -391,12 +338,10 @@ let imgScale = 1;
 	  nextEl: '.swiper-button-next',
 	  prevEl: '.swiper-button-prev',
 	},
-  });
-	//test
-    if(window.location.hash) {
-		var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character'
-		swiper.slideTo(Number(hash)-1)
-	}
+  	});
+
+	
+
 
 	const button = document.querySelector("#Capa_1");
 
@@ -404,68 +349,150 @@ let imgScale = 1;
 	const playButton = document.getElementById("playbutton");
 
 	const allImages = Array.from(document.getElementsByClassName("gallery_img") as HTMLCollectionOf<HTMLElement>);
-	const image1 = document.getElementById("img1");
+	const image1 = document.getElementById("img01");
+	const image2 = document.getElementById("img02");
+	const image3 = document.getElementById("img03");
+	const image4 = document.getElementById("img04");
+	const image5 = document.getElementById("img05");
+	const image6 = document.getElementById("img06");
+	const image7 = document.getElementById("img07");
+	const image8 = document.getElementById("img08");
+	const image9 = document.getElementById("img09");
+	const image10 = document.getElementById("img10");
 
 	const arrow1 = document.getElementById("arrow1");
 	const arrow2 = document.getElementById("arrow2");
+	
 
+	const audio = document.createElement('audio'); audio.id = "audio";
+	audio.src = "https://dl.dropbox.com/scl/fi/29mhuzz9phbi8cf7z4v1s/1-Sementin-leiju-masterv1.flac?rlkey=c96h0gfr71etux3ngvjh0n562&st=l4r8vp8y"
 
-	//var audio = new Audio('https://pub-6a26b65f31aa4f40b5c418ef13aac133.r2.dev/Be%20-%20Kindle%202023-09-09.flac');
-	var audio = new Audio('https://dl.dropbox.com/scl/fi/7096koz7nj3ao6ph109er/t.wav?rlkey=8c4i46s1lg225sy5gow8autmn&st=yoq2nrck');
-	audio.volume = 0;
+	const audio1 = 'https://dl.dropbox.com/scl/fi/29mhuzz9phbi8cf7z4v1s/1-Sementin-leiju-masterv1.flac?rlkey=c96h0gfr71etux3ngvjh0n562&st=l4r8vp8y';
+	const audio2 = 'https://dl.dropbox.com/scl/fi/m7j4blz2bmh0oqs979jkx/2-Inhimillisyyskato-masterv1.flac?rlkey=3eg1wooaue1vjzhnn744eukw5&st=lvb25mh2';
+	const audio3 = 'https://dl.dropbox.com/scl/fi/nq3mfxenx89c42m3mcdq9/3-Kammio-masterv1-1.flac?rlkey=uch4nkgmwe0xuaguhcthedmqj&st=tug0kw6d';
+	const audio4 = 'https://dl.dropbox.com/scl/fi/diepmeebv67bg4xpfgyyd/4-Ulosp-syyn-vie-tie-masterv1.flac?rlkey=5qmxwl6ainmaexvzj37m5gwec&st=xtcmiszh';
+	const audio5 = 'https://dl.dropbox.com/scl/fi/m64nasyr2cy412lk09n7u/5-Muistitko-edes-valon-masterv1.flac?rlkey=ixlfvbkb2ydr6wogk9h3awcp2&st=6a8dp1jx';
+	const audio6 = 'https://dl.dropbox.com/scl/fi/6r6a13adln77esfdcbqh2/6-Ja-y-oli-hiljainen-ja-ter-v-masterv1.flac?rlkey=h42at0opv9zp253i1eyvqar7b&st=06xi70se';
+	const audio7 = 'https://dl.dropbox.com/scl/fi/0ggi24qgh182bcwephdvj/7-Kulutettu-loppuun-masterv1.flac?rlkey=dkek74c1qnes6bvq82nimuqsi&st=3o576gqf';
+	const audio8 = 'https://dl.dropbox.com/scl/fi/solk196h9clao66h8v8lo/8-L-mmin-valo-masterv1.flac?rlkey=1asm2lb1ljfovo087lil7nuf1&st=zqw09pww';
+	const audio9 = 'https://dl.dropbox.com/scl/fi/6l4f0znzxgc1atjs2o94r/9-Kipua-n-m-masterv1.flac?rlkey=013rrkaaw8o6hyhna4x4uuz8v&st=p4nutyp4';
+	const audio10 ='https://dl.dropbox.com/scl/fi/ss7n8nppjxys4txxjpzs7/10-Sokkelon-ydin-masterv1.flac?rlkey=veeyrhyej4hmanrdm2tmcsjof&st=mlmtyqy8';
+	
+
+	//var audio = new Audio(optimizeUrl
+	//audiosus.volume = 0;
+	//var audio = new Audio('https://res.cloudinary.com/demo/video/upload/dog.mp3')
 
 	var player = document.getElementById("music");
 	
 	
 	//img1Obj.style.opacity = "0.5";
-	
+
 
 	function imageUp() {
+		
+		let selector = swiper.realIndex;
+		switch(selector)
+		{
+			case 0:
+				audio.src = audio1;
+				break;
+			
+			case 1:
+				audio.src = audio2;
+				break;
+			case 2:
+				audio.src = audio3;
+				break;
+			
+			case 3:
+				audio.src = audio4;
+				break;
+
+			case 4:
+				audio.src = audio5;
+				break;
+			
+			case 5:
+				audio.src = audio6;
+				break;
+			case 6:
+				audio.src = audio7;
+				break;
+			
+			case 7:
+				audio.src = audio8;
+				break;
+			
+			case 8:
+				audio.src = audio9;
+				break;
+			
+			case 9:
+				audio.src = audio10;
+				break;
+
+			default:
+				audio.src = audio1;
+				break;	
+	}
+			
+		
 		togglePause();
 		audio.volume = 0;
 		volumeUp();
-		
-		//img1Obj.style.width = "100%";
-		//img1Obj.style.opacity = "2";
+		for (let i = 0; i < allImages.length; i++) 
+		{
+  			allImages[i].style.transform = "scale(1.0)"
+			allImages[i].style.opacity = "1"
+		}
 		pauseButton.style.visibility = "visible";
 		playButton.style.visibility = "hidden";
 		console.log(audio.paused);
 		player.style.visibility = "visible";
 		player.classList.toggle("paused");
-		
 
-		for (let i = 0; i < allImages.length; i++) 
-		{
-  			allImages[i].style.width = "100%"
-			allImages[i].style.opacity = "1"
-		}
 	}
 
 	function imageDown() {
 		audio.volume = 1;
 		volumeDown();
-		//img1Obj.style.width = "70%";
-		//img1Obj.style.opacity = "0.5"
-		
+		for (let i = 0; i < allImages.length; i++) 
+		{
+  			allImages[i].style.transform = "scale(0.8)"
+			allImages[i].style.opacity = "0.5"
+		}
 		pauseButton.style.visibility = "hidden";
 		playButton.style.visibility = "visible";
 		console.log(audio.paused);
 		player.classList.toggle("paused");
 
-		for (let i = 0; i < allImages.length; i++) 
-		{
-  			allImages[i].style.width = "80%";
-			allImages[i].style.opacity = "0.5";
-		}
 	}
 
 	function togglePause() {
 		if (audio.paused) {
 			audio.play();
+			audio.onended = function(){
+				pauseStop();
+			}
 		}
 		else {
 			audio.pause();
 		}
+	}
+
+	function pauseStop() {
+		volumeDown();
+		for (let i = 0; i < allImages.length; i++) 
+		{
+  			allImages[i].style.transform = "scale(0.8)"
+			allImages[i].style.opacity = "0.5"
+		}
+		pauseButton.style.visibility = "hidden";
+		playButton.style.visibility = "visible";
+		console.log(audio.paused);
+		
+		player.classList.remove("paused");
 	}
 
 
@@ -500,6 +527,87 @@ let imgScale = 1;
 		}
 
 	});
+	image2.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
+			imageDown();
+		} else {
+			imageUp()	
+		}
+
+	});
+	image3.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
+			imageDown();
+		} else {
+			imageUp()	
+		}
+
+	});
+	image4.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
+			imageDown();
+		} else {
+			imageUp()	
+		}
+
+	});
+	image5.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
+			imageDown();
+		} else {
+			imageUp()	
+		}
+
+	});
+	image6.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
+			imageDown();
+		} else {
+			imageUp()	
+		}
+
+	});
+	image7.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
+			imageDown();
+		} else {
+			imageUp()	
+		}
+
+	});
+	image8.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
+			imageDown();
+		} else {
+			imageUp()	
+		}
+
+	});
+	image9.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
+			imageDown();
+		} else {
+			imageUp()	
+		}
+
+	});
+	image10.addEventListener('click', () => {
+		console.log("it works");
+		if (document.getElementById("pausebutton").style.visibility == "visible") {
+			imageDown();
+		} else {
+			imageUp()	
+		}
+
+	});
 	
     button.addEventListener('click', () => {
 		console.log("it works");
@@ -508,9 +616,10 @@ let imgScale = 1;
 		} else {
 			imageUp();
 		}
-		
+	
 	});
 	
+	window.onhashchange = pauseStop;
 
 	
 </script>
