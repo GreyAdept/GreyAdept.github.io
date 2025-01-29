@@ -92,7 +92,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
     </div>
   </body>
   <div id="footer" class="flex">
-	<h1 id="title2" class="font-extralight">Asta Leppä <br> Juho Vihervuori</h1>
+	<u><h1 id="title2" class="font-extralight"><a href="/tekijat">Tekijät</a></h1></u>
 	<u><h1 id="esseetitle" class="font-extralight"><a href="/essee">Essee</a></h1></u>
 </div>	
 </html>
@@ -495,6 +495,62 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 		player.classList.remove("paused");
 	}
 
+	function changeSong() {
+		if (!audio.paused)
+	{
+		audio.pause();
+		player.classList.toggle("paused");
+	}
+	
+	let selector = swiper.realIndex;
+		switch(selector)
+		{
+			case 0:
+				audio.src = audio1;
+				break;
+			
+			case 1:
+				audio.src = audio2;
+				break;
+			case 2:
+				audio.src = audio3;
+				break;
+			
+			case 3:
+				audio.src = audio4;
+				break;
+
+			case 4:
+				audio.src = audio5;
+				break;
+			
+			case 5:
+				audio.src = audio6;
+				break;
+			case 6:
+				audio.src = audio7;
+				break;
+			
+			case 7:
+				audio.src = audio8;
+				break;
+			
+			case 8:
+				audio.src = audio9;
+				break;
+			
+			case 9:
+				audio.src = audio10;
+				break;
+
+			default:
+				audio.src = audio1;
+				break;	
+		}
+		imageUp();
+		
+	}
+
 
 	function volumeUp() {
 		if (audio.volume < 0.9) {
@@ -619,7 +675,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	
 	});
 	
-	window.onhashchange = pauseStop;
+	window.onhashchange = changeSong;
 
 	
 </script>
