@@ -73,13 +73,13 @@ import { Image } from 'astro:assets';
 			</div>
 		</div>	
         <!-- Add navigation buttons -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-		<div class="swiper-pagination"></div>
+        <div class="swiper-button-next" id="arrow1"></div>
+        <div class="swiper-button-prev" id="arrow2"></div>
+		<div class="swiper-pagination" id="pagi"></div>
       </div>
 	  <div id="buttonsandbars" class="flex">
 				
-		<svg class="controlbutton" fill="#000000" height="55px" width="55px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+		<svg class="controlbutton" fill="#000000" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 viewBox="0 0 60 60" xml:space="preserve">
 <g id="playbutton">
 <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
@@ -155,7 +155,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		gap: 10vw;
+		gap: 50vw;
 		padding-top: 1%;
 		z-index: 10;
 		flex-wrap: wrap;
@@ -181,8 +181,9 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	
 	.swiper {
 	    width: 99%;
-  		height: 50vh;
+  		height: 60vh;
 		display: flex;
+		padding-bottom: 1px;
 
 	}
 
@@ -192,7 +193,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	}
 
 	.swiper-pagination{
-		margin-top: 3px;
+		
 	}
 
 
@@ -341,6 +342,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	loop: true,
 	autoHeight: false,
     speed: 600,
+	spaceBetween: 40,
 	hashNavigation: {
 		watchState: true,
 	},
@@ -366,6 +368,8 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 
 	const pauseButton = document.getElementById("pausebutton");
 	const playButton = document.getElementById("playbutton");
+
+	const pagi = document.getElementById("pagi")
 
 	const allImages = Array.from(document.getElementsByClassName("gallery_img") as HTMLCollectionOf<HTMLElement>);
 	const image1 = document.getElementById("img01");
@@ -465,8 +469,11 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
   			allImages[i].style.transform = "scale(1.0)"
 			allImages[i].style.opacity = "1"
 		}
+		pagi.style.visibility = "hidden";
 		pauseButton.style.visibility = "visible";
 		playButton.style.visibility = "hidden";
+		arrow1.style.visibility = "hidden"
+		arrow2.style.visibility = "hidden"
 		console.log(audio.paused);
 		player.style.visibility = "visible";
 		player.classList.add("paused")
@@ -483,8 +490,11 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
   			allImages[i].style.transform = "scale(0.8)"
 			allImages[i].style.opacity = "0.5"
 		}
+		pagi.style.visibility = "visible";
 		pauseButton.style.visibility = "hidden";
 		playButton.style.visibility = "visible";
+		arrow1.style.visibility = "visible"
+		arrow2.style.visibility = "visible"
 		console.log(audio.paused);
 		player.classList.remove("paused");
 		//player.classList.toggle("paused");
