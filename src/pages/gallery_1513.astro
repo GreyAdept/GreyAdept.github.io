@@ -8,6 +8,9 @@ let imgScale = 1;
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Image } from 'astro:assets';
+
+
 
 ---
 
@@ -22,39 +25,51 @@ import 'swiper/css/pagination';
   </head>
   <body class="bg-gray-100">
     <div class="container mx-auto p-4">
+		<br>
 		<h1 id="title" class="font-extralight">Tyhjyyden valu - Casting for Emptiness</h1>
+		<br>
       <div class="swiper">
         <div class="swiper-wrapper">
 			<!-- Slides -->
 			<div data-hash="slide01" class="swiper-slide">
-				<img src='https://i.ibb.co/grBV0qY/Sementin-leiju.webp' alt="Photo n.1" id="img01" class="gallery_img">
+				<!--<img src='https://i.ibb.co/grBV0qY/Sementin-leiju.webp' alt="Photo n.1" id="img01" class="gallery_img">-->
+				<Image src='https://i.ibb.co/grBV0qY/Sementin-leiju.webp'alt="Photo n.1" width={1620} height={1080} decoding='async' loading="lazy" id="img01" class="gallery_img"></Image>
 			</div>
 			<div data-hash="slide02" class="swiper-slide">
-				<img src='https://i.ibb.co/dw8zddrx/Inhimillisyyskatoaa.webp' alt="Photo n.2" id="img02" class="gallery_img">
+				<!-- <img src='https://i.ibb.co/dw8zddrx/Inhimillisyyskatoaa.webp' alt="Photo n.2" id="img02" class="gallery_img">-->
+				<Image src='https://i.ibb.co/dw8zddrx/Inhimillisyyskatoaa.webp'alt="Photo n.2" width={1555} height={1037} decoding='async' loading="lazy" id="img02" class="gallery_img"></Image>
 			</div>
 			<div data-hash="slide03" class="swiper-slide">                        
-				<img src='https://i.ibb.co/tKBvfSc/Kammio.webp' alt="Photo n.3" id="img03" class="gallery_img">
+				<!--<img src='https://i.ibb.co/tKBvfSc/Kammio.webp' alt="Photo n.3" id="img03" class="gallery_img">-->
+				<Image src='https://i.ibb.co/tKBvfSc/Kammio.webp'alt="Photo n.3" width={1579} height={1053} decoding='async' loading="lazy" id="img03" class="gallery_img"></Image>
 			</div>
 			<div data-hash="slide04" class="swiper-slide">
-				<img src='https://i.ibb.co/TkZY0JT/Ulosp-syyn-vie-tie-2.webp' alt="Photo n.4" id="img04" class="gallery_img">
+				<!--<img src='https://i.ibb.co/TkZY0JT/Ulosp-syyn-vie-tie-2.webp' alt="Photo n.4" id="img04" class="gallery_img">-->
+				<Image src='https://i.ibb.co/TkZY0JT/Ulosp-syyn-vie-tie-2.webp'alt="Photo n.4" width={1555} height={985} decoding='async' loading="lazy" id="img04" class="gallery_img"></Image>
 			</div>
 			<div data-hash="slide05" class="swiper-slide">
-				<img src='https://i.ibb.co/N91Xy2j/Muistitko-edes-valon.webp' alt="Photo n.5" id="img05" class="gallery_img">
+				<!--<img src='https://i.ibb.co/N91Xy2j/Muistitko-edes-valon.webp' alt="Photo n.5" id="img05" class="gallery_img">-->
+				<Image src='https://i.ibb.co/N91Xy2j/Muistitko-edes-valon.webp'alt="Photo n.5" width={1080} height={1620} decoding='async' loading="lazy" id="img05" class="gallery_img"></Image>
 			</div>
 			<div data-hash="slide06" class="swiper-slide">
-				<img src='https://i.ibb.co/FhqDw5d/Ja-y-oli-hiljainen-ja-ter-v.webp' alt="Photo n.6" id="img06" class="gallery_img">
+				<!--<img src='https://i.ibb.co/FhqDw5d/Ja-y-oli-hiljainen-ja-ter-v.webp' alt="Photo n.6" id="img06" class="gallery_img">-->
+				<Image src='https://i.ibb.co/FhqDw5d/Ja-y-oli-hiljainen-ja-ter-v.webp'alt="Photo n.6" width={1620} height={1080} decoding='async' loading="lazy" id="img06" class="gallery_img"></Image>
 			</div>
 			<div data-hash="slide07" class="swiper-slide">
-				<img src='https://i.ibb.co/RP93J2F/Kulutettu-loppuun-2.webp' alt="Photo n.7" id="img07" class="gallery_img">
+				<!--<img src='https://i.ibb.co/RP93J2F/Kulutettu-loppuun-2.webp' alt="Photo n.7" id="img07" class="gallery_img">-->
+				<Image src='https://i.ibb.co/RP93J2F/Kulutettu-loppuun-2.webp'alt="Photo n.6" width={1435} height={1076} decoding='async' loading="lazy" id="img07" class="gallery_img"></Image>
 			</div>
 			<div data-hash="slide08" class="swiper-slide">
-				<img src='https://i.ibb.co/PrCNTWz/L-mmin-valo-kaikessa-t-ss-kylm-ss.webp' alt="Photo n.8" id="img08" class="gallery_img">
+				<!--<img src='https://i.ibb.co/PrCNTWz/L-mmin-valo-kaikessa-t-ss-kylm-ss.webp' alt="Photo n.8" id="img08" class="gallery_img">-->
+				<Image src='https://i.ibb.co/PrCNTWz/L-mmin-valo-kaikessa-t-ss-kylm-ss.webp'alt="Photo n.8" width={1544} height={1029} decoding='async' loading="lazy" id="img08" class="gallery_img"></Image>
 			</div>
 			<div data-hash="slide09" class="swiper-slide">
-				<img src='https://i.ibb.co/KhFXGwZ/Kipua-n-m-2.webp' alt="Photo n.9" id="img09" class="gallery_img">
+				<!--<img src='https://i.ibb.co/KhFXGwZ/Kipua-n-m-2.webp' alt="Photo n.9" id="img09" class="gallery_img">-->
+				<Image src='https://i.ibb.co/KhFXGwZ/Kipua-n-m-2.webp'alt="Photo n.9" width={1260} height={1680} decoding='async' loading="lazy" id="img09" class="gallery_img"></Image>
 			</div>
 			<div data-hash="slide10" class="swiper-slide">
-				<img src='https://i.ibb.co/vzbh5hZ/Sokkelon-ydin-pieni.webp' alt="Photo n.8" id="img10" class="gallery_img">
+				<!--<img src='https://i.ibb.co/vzbh5hZ/Sokkelon-ydin-pieni.webp' alt="Photo n.8" id="img10" class="gallery_img">-->
+				<Image src='https://i.ibb.co/vzbh5hZ/Sokkelon-ydin-pieni.webp'alt="Photo n.10" width={1260} height={1680} decoding='async' loading="lazy" id="img10" class="gallery_img"></Image>
 			</div>
 		</div>	
         <!-- Add navigation buttons -->
@@ -142,7 +157,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 		justify-content: center;
 		gap: 10vw;
 		padding-top: 1%;
-		z-index: 999;
+		z-index: 10;
 		flex-wrap: wrap;
 
 
@@ -176,11 +191,14 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 		
 	}
 
-
+	.swiper-pagination{
+		margin-top: 3px;
+	}
 
 
     #buttonsandbars {
 		gap: 3px;
+		margin-top: 3px;
 		display: flex;
 		margin-left: auto;
 		margin-right: auto;
@@ -343,7 +361,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 
 	
 
-
+	var hasClicked = false;
 	const button = document.querySelector("#Capa_1");
 
 	const pauseButton = document.getElementById("pausebutton");
@@ -368,16 +386,16 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	const audio = document.createElement('audio'); audio.id = "audio";
 	audio.src = "https://dl.dropbox.com/scl/fi/29mhuzz9phbi8cf7z4v1s/1-Sementin-leiju-masterv1.flac?rlkey=c96h0gfr71etux3ngvjh0n562&st=l4r8vp8y"
 
-	const audio1 = 'https://dl.dropbox.com/scl/fi/29mhuzz9phbi8cf7z4v1s/1-Sementin-leiju-masterv1.flac?rlkey=c96h0gfr71etux3ngvjh0n562&st=l4r8vp8y';
-	const audio2 = 'https://dl.dropbox.com/scl/fi/m7j4blz2bmh0oqs979jkx/2-Inhimillisyyskato-masterv1.flac?rlkey=3eg1wooaue1vjzhnn744eukw5&st=lvb25mh2';
-	const audio3 = 'https://dl.dropbox.com/scl/fi/nq3mfxenx89c42m3mcdq9/3-Kammio-masterv1-1.flac?rlkey=uch4nkgmwe0xuaguhcthedmqj&st=tug0kw6d';
-	const audio4 = 'https://dl.dropbox.com/scl/fi/diepmeebv67bg4xpfgyyd/4-Ulosp-syyn-vie-tie-masterv1.flac?rlkey=5qmxwl6ainmaexvzj37m5gwec&st=xtcmiszh';
-	const audio5 = 'https://dl.dropbox.com/scl/fi/m64nasyr2cy412lk09n7u/5-Muistitko-edes-valon-masterv1.flac?rlkey=ixlfvbkb2ydr6wogk9h3awcp2&st=6a8dp1jx';
-	const audio6 = 'https://dl.dropbox.com/scl/fi/6r6a13adln77esfdcbqh2/6-Ja-y-oli-hiljainen-ja-ter-v-masterv1.flac?rlkey=h42at0opv9zp253i1eyvqar7b&st=06xi70se';
-	const audio7 = 'https://dl.dropbox.com/scl/fi/0ggi24qgh182bcwephdvj/7-Kulutettu-loppuun-masterv1.flac?rlkey=dkek74c1qnes6bvq82nimuqsi&st=3o576gqf';
-	const audio8 = 'https://dl.dropbox.com/scl/fi/solk196h9clao66h8v8lo/8-L-mmin-valo-masterv1.flac?rlkey=1asm2lb1ljfovo087lil7nuf1&st=zqw09pww';
-	const audio9 = 'https://dl.dropbox.com/scl/fi/6l4f0znzxgc1atjs2o94r/9-Kipua-n-m-masterv1.flac?rlkey=013rrkaaw8o6hyhna4x4uuz8v&st=p4nutyp4';
-	const audio10 ='https://dl.dropbox.com/scl/fi/ss7n8nppjxys4txxjpzs7/10-Sokkelon-ydin-masterv1.flac?rlkey=veeyrhyej4hmanrdm2tmcsjof&st=mlmtyqy8';
+	const audio1 = 'https://media.tyhjyydenvalu.com/1%20Sementin%20leiju%20masterv1.flac';
+	const audio2 = 'https://media.tyhjyydenvalu.com/2%20Inhimillisyyskato%20masterv1.flac';
+	const audio3 = 'https://media.tyhjyydenvalu.com/3%20Kammio%20masterv1%20(1).flac';
+	const audio4 = 'https://media.tyhjyydenvalu.com/4%20Ulosp%C3%A4%C3%A4syyn%20vie%20tie%20masterv1.flac';
+	const audio5 = 'https://media.tyhjyydenvalu.com/5%20Muistitko%20edes%20valon%20masterv1.flac';
+	const audio6 = 'https://media.tyhjyydenvalu.com/6%20Ja%20y%C3%B6%20oli%20hiljainen%20ja%20ter%C3%A4v%C3%A4%20masterv1.flac';
+	const audio7 = 'https://media.tyhjyydenvalu.com/7%20Kulutettu%20loppuun%20masterv1.flac';
+	const audio8 = 'https://media.tyhjyydenvalu.com/8%20L%C3%A4mmin%20valo%20masterv1.flac';
+	const audio9 = 'https://media.tyhjyydenvalu.com/9%20Kipua%20n%C3%A4m%C3%A4%20masterv1.flac';
+	const audio10 ='https://media.tyhjyydenvalu.com/10%20Sokkelon%20ydin%20masterv1.flac';
 	
 
 	//var audio = new Audio(optimizeUrl
@@ -436,12 +454,12 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 			default:
 				audio.src = audio1;
 				break;	
-	}
+		}
 			
 		
 		togglePause();
 		audio.volume = 0;
-		volumeUp();
+		fadeVolIn(0);
 		for (let i = 0; i < allImages.length; i++) 
 		{
   			allImages[i].style.transform = "scale(1.0)"
@@ -451,13 +469,15 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 		playButton.style.visibility = "hidden";
 		console.log(audio.paused);
 		player.style.visibility = "visible";
-		player.classList.toggle("paused");
+		player.classList.add("paused")
+		//player.classList.toggle("paused");
 
 	}
 
 	function imageDown() {
 		audio.volume = 1;
-		volumeDown();
+		fadeVolOut(1);
+		hasClicked = false;
 		for (let i = 0; i < allImages.length; i++) 
 		{
   			allImages[i].style.transform = "scale(0.8)"
@@ -466,7 +486,8 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 		pauseButton.style.visibility = "hidden";
 		playButton.style.visibility = "visible";
 		console.log(audio.paused);
-		player.classList.toggle("paused");
+		player.classList.remove("paused");
+		//player.classList.toggle("paused");
 
 	}
 
@@ -483,7 +504,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	}
 
 	function pauseStop() {
-		volumeDown();
+		fadeVolOut(1);
 		for (let i = 0; i < allImages.length; i++) 
 		{
   			allImages[i].style.transform = "scale(0.8)"
@@ -500,9 +521,9 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 		if (!audio.paused)
 	{
 		audio.pause();
-		player.classList.toggle("paused");
 	}
-	
+	pauseButton.style.visibility = "hidden";
+	playButton.style.visibility = "visible";
 	let selector = swiper.realIndex;
 		switch(selector)
 		{
@@ -548,35 +569,63 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 				audio.src = audio1;
 				break;	
 		}
-		imageUp();
+		if (hasClicked)
+		{
+			imageUp();
+		}
+		
 		
 	}
 
+	function fadeVolIn(newPercent){
+		console.log("fading in!")
+		if(newPercent < 1){
+		audio.volume = newPercent;
+		setTimeout(fadeVolIn,2, newPercent+0.001);
+		}
+		else{
+			audio.volume = 1;
+		}
+	}
+	function fadeVolOut(newPercent){
+		console.log("fading out!")
+		if(newPercent > 0){
+		audio.volume = newPercent;
+		setTimeout(fadeVolOut,2, newPercent-0.001);
+		}
+		else{
+			audio.volume = 0;
+		}
+	}
 
+	
+
+	/*
 	function volumeUp() {
 		if (audio.volume < 0.9) {
 			audio.volume += 0.1;
-			var timer = setTimeout(volumeUp,100);
+			setTimeout(volumeUp,100);
 		} else {
 			audio.volume = 1;
 		}
 		}
-		
+	
 	function volumeDown() {
 		if (audio.volume > 0.1) {
 			audio.volume -= 0.1;
-			var timer = setTimeout(volumeDown,100);
+			setTimeout(volumeDown,100);
 		} 
 		else{
 			audio.volume = 0;
 			togglePause();
 		}	
 	}
-
+	*/
 
 
     image1.addEventListener('click', () => {
 		console.log("it works");
+		hasClicked = true;
 		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
@@ -586,6 +635,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	});
 	image2.addEventListener('click', () => {
 		console.log("it works");
+		hasClicked = true;
 		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
@@ -595,6 +645,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	});
 	image3.addEventListener('click', () => {
 		console.log("it works");
+		hasClicked = true;
 		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
@@ -604,6 +655,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	});
 	image4.addEventListener('click', () => {
 		console.log("it works");
+		hasClicked = true;
 		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
@@ -613,6 +665,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	});
 	image5.addEventListener('click', () => {
 		console.log("it works");
+		hasClicked = true;
 		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
@@ -622,6 +675,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	});
 	image6.addEventListener('click', () => {
 		console.log("it works");
+		hasClicked = true;
 		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
@@ -631,6 +685,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	});
 	image7.addEventListener('click', () => {
 		console.log("it works");
+		hasClicked = true;
 		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
@@ -640,6 +695,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	});
 	image8.addEventListener('click', () => {
 		console.log("it works");
+		hasClicked = true;
 		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
@@ -649,6 +705,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	});
 	image9.addEventListener('click', () => {
 		console.log("it works");
+		hasClicked = true;
 		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
@@ -658,6 +715,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	});
 	image10.addEventListener('click', () => {
 		console.log("it works");
+		hasClicked = true;
 		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
@@ -668,6 +726,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	
     button.addEventListener('click', () => {
 		console.log("it works");
+		hasClicked = true;
 		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
 		} else {
@@ -677,7 +736,7 @@ S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
 	});
 	
 	window.onhashchange = changeSong;
-
+	
 	
 </script>
 
