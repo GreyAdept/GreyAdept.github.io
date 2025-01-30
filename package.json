@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.2.1",
+    "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.5",
     "@fontsource-variable/hepta-slab": "^5.1.0",
     "@fontsource/notable": "^5.1.0",
