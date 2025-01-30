@@ -6,54 +6,56 @@ import '@fontsource-variable/hepta-slab';
 let imgScale = 1;
 ---
 
-<Layout title="Tyhjyyden Valu">
+<Layout title="test">
 	<!doctype html>
 	<html lang="en">
  	 	<head>
     		<title>Tyhjyyden Valu</title>
-			<meta name="description" content="Tyhjyyden Valu" />
  	 	</head>
  	 <body>
 		<main>
 			<section>
-				<h1 id="title" class="font-extralight">Tyhjyyden valu - Casting for Emptiness</h1>
-			<section id="imgcontainer">
-				<div id="imgandbutton">
-					<img src='https://i.imgur.com/GYiPIRC.jpeg' alt="img1" id="img1">
-					<div id="buttonandbars" class="flex flex-row place-items-center gap-0.5">
-						<svg class="controlbutton justify-self-start" fill="#000000" height="50px" width="50px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-		viewBox="0 0 60 60" xml:space="preserve">
-	<g id="playbutton">
-		<path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
-			c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
-			C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z"/>
-		<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-			S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
-	</g>
-	<g id="pausebutton">
-		<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
-			S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
-		<path d="M33,46h8V14h-8V46z M35,16h4v28h-4V16z"/>
-		<path d="M19,46h8V14h-8V46z M21,16h4v28h-4V16z"/>
-	</g>
-						</svg>
-						<div id="animation" class="bg-black justify-self-end">
-							<div class="now playing" id="music">
-								<span class="bar n1">A</span>
-								<span class="bar n2">B</span>
-								<span class="bar n3">c</span>
-								<span class="bar n4">D</span>
-								<span class="bar n5">E</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>	
+				<h1 id="title" class="font-extralight">Tyhjyyden valu</h1>
+			</section>
+			<section>
+				<div class="essaybox">
+					<br>
+					<br>
+					<b>Asta Leppä</b> on esseisti, Suomen tietokirjailijat ry ja Valokuvakeskus Perin jäsen.
+					Tyhjyyden valu on hänen neljäs valokuvanäyttelynsä.
+					<br>
+					<br>
+					<b>Juho Vihervuori</b> on tehnyt musiikkia yli 20 vuotta, soittanut eri kokoonpainoissa sekä säveltänyt musiikkia tanssiteoksiin ja lyhytelokuviin.
+					<br>
+					<br>
+					<em>Tekijät haluavat kiittää:</em>
+					<br>
+					<br>
+					<b>Aatu Leppä</b>, insinööriopiskelija, Turun Ammattikorkeakoulu, näyttelyn tekninen toteutus
+					<br>
+					<b>Jori Hulkkonen</b>, muusikko, musiikin masterointi
+					<br>
+					<b>Taavi Rekkaro</b>, valokuvataitelija, ArtProof, Viro
+					<br>
+					<b>Matti-Juhana Ikonen</b>, JAS Tekniikka Oy
+					<br>
+					<b>Liisa Vähäkylä</b>, kuvataitelija
+					<br>
+					<b>Aapeli Leppä</b>, maantieteen opiskelija, Helsingin Yliopisto
+					<br>
+					<b>Kirsi Leimu</b>, museoamanuenssi
+					<br>
+					<b>Defne Dinç</b>, laulaja (vokaalit: sementin leiju ja kammio)
+					<br>
+					<b>Ari Heinonen</b>, valokuvaaja
+					
+					<h1>
+						<p><u><h1 id="takaisin" class="font-extralight"><a href="/index">Takaisin</a></h1></u></p>
+					</h1>
+			</section>
+            
 		</main>
-		<div id="footer" class="flex">
-			<u><h1 id="title2" class="font-extralight"><a href="/esittely_tekijat">Tekijät</a></h1></u>
-			<u><h1 id="esseetitle" class="font-extralight"><a href="/esittely_essee">Essee</a></h1></u>
-		</div>	
+		<hr>
   	</body>
 	</html>
 </Layout>
@@ -66,8 +68,8 @@ let imgScale = 1;
 		margin: 0px;
 		padding: 0em;
 		background-color: white;
-		overflow: hidden;
-		min-height: 100svh;
+		/*overflow: hidden;*/
+		/*min-height: 100svh;*/
 	}
 	
 	h1 {
@@ -84,6 +86,15 @@ let imgScale = 1;
 		text-align: center;
 	}
 
+	.essaybox
+	{
+		overflow: auto;
+		max-width: 50%;
+		width: 50%;
+		margin: auto;
+		
+	}
+
 	#footer {
 		position:fixed;
 		bottom: 0;
@@ -97,35 +108,49 @@ let imgScale = 1;
 		padding-top: 1%;
 		z-index: 999;
 	}
+
+    .gallery_img {
+        max-width: 100%;
+		width: 80%;
+		display: block;
+		transform-origin: top;
+		transition: all 5s ease-in-out;
+		margin: auto;
+		cursor: pointer;
+		opacity: 0.5;
+		
+    }
+    
 	
 	.swiper {
-		color: white;
-		transition: transform .3s;
-		transform: scale(0.5)
+	    overflow: visible;
 	}
 
-	#img1 {	
-		display: block;
-		opacity: 1;
-		transition: all 5s ease-in-out;
-		cursor:pointer;	
-		transform-origin: top;
-	}
+
+    #buttonsandbars {
+		display: flex;
+        margin:auto;
+        flex-direction: row;
+        justify-content: center;
+		gap: 3px;
+		margin-top: 150px;
+    }
 
 	#imgcontainer{
 		width: 100%;
 		max-width: 50vh;
-		margin:auto;
+        margin: auto;
 		transition: all 5s ease-in-out;
 		flex-direction: column;
 		padding-left: 1rem;
 		padding-right: 1rem;
 		
 	}
+
 	#imgandbutton{
 		
 		display: block;
-		width: 70%;
+		width: 100%;
 		max-width: 100%;
 		margin:auto;
 		transition: all 5s ease-in-out;
@@ -140,10 +165,21 @@ let imgScale = 1;
 
 	.swiper-slide
 	{
-		transition: transform .2s;
+		transition: all 1s;
 		margin-left: auto;
 		margin-right: auto;
+		
+  
 	}
+
+    #image_swiper
+    {
+        margin-left: auto;
+        margin-right: auto;
+		/*width: 50%;*/
+        
+    }
+
 
 	#playbutton{
 		visibility: visible;
@@ -181,10 +217,12 @@ let imgScale = 1;
 .playing {
   position: absolute;
   display: block;
+  margin-top: 25px;
 }
 .now.playing .bar {
   display: inline-block;
   margin-right: 1px;
+  
   width: 2px;
   height: 1px;
   overflow: hidden;
@@ -256,46 +294,100 @@ let imgScale = 1;
 </style>
 
 <script>
-	//test
-	const img1 = document.querySelector("#img1");
-	const button = document.querySelector("#Capa_1")
+	import Swiper from 'swiper';
+	import { Navigation, Pagination } from 'swiper/modules';
+	// import Swiper and modules styles
+	import 'swiper/css';
+	import 'swiper/css/navigation';
+	import 'swiper/css/pagination';
 
-	const img1Obj = document.getElementById("imgandbutton");
+	const swiper = new Swiper('.swiper', {
+	
+	//swiper modules
+	modules: [Navigation, Pagination],
+	
+	// Optional parameters
+	direction: 'horizontal',
+	loop: true,
+	autoHeight: true,
+    speed: 600,
+  
+	// If we need pagination
+	pagination: {
+	  el: '.swiper-pagination',
+	},
+  
+	// Navigation arrows
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+  });
+	//test
+    if(window.location.hash) {
+		var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character'
+		swiper.slideTo(Number(hash)-1)
+	}
+
+	const button = document.querySelector("#Capa_1");
+
 	const pauseButton = document.getElementById("pausebutton");
 	const playButton = document.getElementById("playbutton");
 
-	var audio = new Audio('https://dl.dropbox.com/scl/fi/ss7n8nppjxys4txxjpzs7/10-Sokkelon-ydin-masterv1.flac?rlkey=veeyrhyej4hmanrdm2tmcsjof&st=mlmtyqy8');
-	
+	const allImages = Array.from(document.getElementsByClassName("gallery_img") as HTMLCollectionOf<HTMLElement>);
+	const image1 = document.getElementById("img1");
+
+	const arrow1 = document.getElementById("arrow1");
+	const arrow2 = document.getElementById("arrow2");
+
+
+	//var audio = new Audio('https://pub-6a26b65f31aa4f40b5c418ef13aac133.r2.dev/Be%20-%20Kindle%202023-09-09.flac');
+	var audio = new Audio('https://dl.dropbox.com/scl/fi/7096koz7nj3ao6ph109er/t.wav?rlkey=8c4i46s1lg225sy5gow8autmn&st=yoq2nrck');
 	audio.volume = 0;
 
 	var player = document.getElementById("music");
-
-	img1Obj.style.opacity = "0.5";
+	
+	
+	//img1Obj.style.opacity = "0.5";
 	
 
 	function imageUp() {
 		togglePause();
 		audio.volume = 0;
 		volumeUp();
-		img1Obj.style.width = "100%";
-		img1Obj.style.opacity = "2";
+		
+		//img1Obj.style.width = "100%";
+		//img1Obj.style.opacity = "2";
 		pauseButton.style.visibility = "visible";
 		playButton.style.visibility = "hidden";
 		console.log(audio.paused);
 		player.style.visibility = "visible";
 		player.classList.toggle("paused");
 		
-		
+
+		for (let i = 0; i < allImages.length; i++) 
+		{
+  			allImages[i].style.width = "100%"
+			allImages[i].style.opacity = "1"
+		}
 	}
+
 	function imageDown() {
 		audio.volume = 1;
 		volumeDown();
-		img1Obj.style.width = "70%";
-		img1Obj.style.opacity = "0.5"
+		//img1Obj.style.width = "70%";
+		//img1Obj.style.opacity = "0.5"
+		
 		pauseButton.style.visibility = "hidden";
 		playButton.style.visibility = "visible";
 		console.log(audio.paused);
 		player.classList.toggle("paused");
+
+		for (let i = 0; i < allImages.length; i++) 
+		{
+  			allImages[i].style.width = "80%";
+			allImages[i].style.opacity = "0.5";
+		}
 	}
 
 	function togglePause() {
@@ -330,7 +422,7 @@ let imgScale = 1;
 
 
 
-    img1.addEventListener('click', () => {
+    image1.addEventListener('click', () => {
 		console.log("it works");
 		if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
