@@ -268,11 +268,21 @@ let imgScale = 1;
 	const audio = new Audio('https://media.tyhjyydenvalu.com/10%20Sokkelon%20ydin%20masterv1.flac');
 	var player = document.getElementById("music");
 
+	var canClick = true;
+
 	img1Obj.style.opacity = "0.5";
 	
 
 	function imageUp() {
-		togglePause();
+		//togglePause();
+		if (audio.paused) {
+        audio.play();
+		audio.onended = function(){
+		pauseStop();
+			}
+    	}else{
+        audio.currentTime = 0
+    	}
 		audio.volume = 0;
 		fadeVolIn(0);
 		img1Obj.style.width = "100%";
@@ -305,9 +315,9 @@ let imgScale = 1;
 		}
 		else {
 			audio.pause();
-			audio.currentTime = 0;
 		}
 	}
+
 
 	function pauseStop() {
 		fadeVolOut(1);
@@ -341,7 +351,7 @@ let imgScale = 1;
 
 	function fadeVolIn(newPercent){
 		console.log("fading in!")
-		if(newPercent < 1){
+		if(newPercent <= 1){
 		audio.volume = newPercent;
 		setTimeout(fadeVolIn,2, newPercent+0.001);
 		}
@@ -351,35 +361,43 @@ let imgScale = 1;
 	}
 	function fadeVolOut(newPercent){
 		console.log("fading out!")
-		if(newPercent > 0){
+		if(newPercent >= 0){
 		audio.volume = newPercent;
 		setTimeout(fadeVolOut,2, newPercent-0.001);
 		}
 		else{
 			audio.volume = 0;
-			audio.pause();
-			audio.currentTime = 0;
+			//audio.pause();
+			//audio.currentTime = 0;
 		}
 	}
 
 
     img1.addEventListener('click', () => {
 		console.log("it works");
-		if (document.getElementById("pausebutton").style.visibility == "visible") {
+		if(canClick)
+		{
+			if (document.getElementById("pausebutton").style.visibility == "visible") {
 			imageDown();
-		} else {
+			} else {
 			imageUp()	
+			}
 		}
+		
 
 	});
 	
     button.addEventListener('click', () => {
 		console.log("it works");
-		if (document.getElementById("pausebutton").style.visibility == "visible") {
+		if(canClick)
+		{
+			if (document.getElementById("pausebutton").style.visibility == "visible" && canClick) {
 			imageDown();
-		} else {
+			} else {
 			imageUp();
+			}
 		}
+		
 		
 	});
 	
