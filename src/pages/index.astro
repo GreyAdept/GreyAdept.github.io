@@ -265,9 +265,7 @@ let imgScale = 1;
 	const playButton = document.getElementById("playbutton");
 
 	//var audio = new Audio('https://pub-6a26b65f31aa4f40b5c418ef13aac133.r2.dev/Be%20-%20Kindle%202023-09-09.flac');
-	var audio = new Audio('https://media.tyhjyydenvalu.com/10%20Sokkelon%20ydin%20masterv1.flac');
-	audio.volume = 0;
-
+	const audio = new Audio('https://media.tyhjyydenvalu.com/10%20Sokkelon%20ydin%20masterv1.flac');
 	var player = document.getElementById("music");
 
 	img1Obj.style.opacity = "0.5";
@@ -276,7 +274,7 @@ let imgScale = 1;
 	function imageUp() {
 		togglePause();
 		audio.volume = 0;
-		volumeUp();
+		fadeVolIn(0);
 		img1Obj.style.width = "100%";
 		img1Obj.style.opacity = "2";
 		pauseButton.style.visibility = "visible";
@@ -289,7 +287,7 @@ let imgScale = 1;
 	}
 	function imageDown() {
 		audio.volume = 1;
-		volumeDown();
+		fadeVolOut(1);
 		img1Obj.style.width = "70%";
 		img1Obj.style.opacity = "0.5"
 		pauseButton.style.visibility = "hidden";
@@ -301,15 +299,27 @@ let imgScale = 1;
 	function togglePause() {
 		if (audio.paused) {
 			audio.play();
+			audio.onended = function(){
+				pauseStop();
+			}
 		}
 		else {
 			audio.pause();
+			audio.currentTime = 0;
 		}
 	}
 
+	function pauseStop() {
+		fadeVolOut(1);
+		pauseButton.style.visibility = "hidden";
+		playButton.style.visibility = "visible";
+		console.log(audio.paused);
+		player.classList.remove("paused");
+	}
 
+	/*
 	function volumeUp() {
-		if (audio.volume < 0.9) {
+		if (audio.volume < 1) {
 			audio.volume += 0.001;
 			var timer = setTimeout(volumeUp,5);
 		} else {
@@ -318,7 +328,7 @@ let imgScale = 1;
 		}
 		
 	function volumeDown() {
-		if (audio.volume > 0.1) {
+		if (audio.volume > 0) {
 			audio.volume -= 0.001;
 			var timer = setTimeout(volumeDown,5);
 		} 
@@ -327,7 +337,30 @@ let imgScale = 1;
 			togglePause();
 		}	
 	}
+	*/
 
+	function fadeVolIn(newPercent){
+		console.log("fading in!")
+		if(newPercent < 1){
+		audio.volume = newPercent;
+		setTimeout(fadeVolIn,2, newPercent+0.001);
+		}
+		else{
+			audio.volume = 1;
+		}
+	}
+	function fadeVolOut(newPercent){
+		console.log("fading out!")
+		if(newPercent > 0){
+		audio.volume = newPercent;
+		setTimeout(fadeVolOut,2, newPercent-0.001);
+		}
+		else{
+			audio.volume = 0;
+			audio.pause();
+			audio.currentTime = 0;
+		}
+	}
 
 
     img1.addEventListener('click', () => {
