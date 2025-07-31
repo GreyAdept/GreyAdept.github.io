@@ -15,7 +15,7 @@
     "@astrojs/tailwind": "^5.1.5",
     "@fontsource-variable/hepta-slab": "^5.1.0",
     "@fontsource/notable": "^5.1.0",
-    "astro": "^5.1.10",
+    "astro": "^5.12.6",
     "cloudinary": "^2.5.1",
     "dotenv": "^16.4.7",
     "swiper": "^11.2.1",
